@@ -2,6 +2,7 @@
 
 /**
  * House can now only be extended; it cannot be instantiated.
+ * (See: https://www.php.net/manual/en/language.oop5.abstract.php)
  */
 abstract class House {
   /**
@@ -42,7 +43,9 @@ abstract class House {
 }
 
 /**
- * Ranch is a kind of house, so we're going to extend it.
+ * Ranch is a kind of house, so we're going to extend it, but we don't want it to be extended
+ * any further. This can only be instantiated.
+ * (See: https://www.php.net/manual/en/language.oop5.final.php)
  */
 final class Ranch extends House {
   /**
@@ -67,7 +70,6 @@ $my_house->showHouse();
 
 /**
  * These lines throw a fatal error because House is not allowed to be instantiated.
- * (See: https://www.php.net/manual/en/language.oop5.abstract.php)
  */
 // $neighboring_house = new House(650000, 2, 4, 2);
 // $neighboring_house->listForSale();
@@ -75,7 +77,6 @@ $my_house->showHouse();
 
 /**
  * This will also throw a fatal error because Ranch cannot be extended any further.
- * (See: https://www.php.net/manual/en/language.oop5.final.php)
  */
 // class ExpandedRanch extends Ranch {
 // }

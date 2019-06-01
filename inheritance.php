@@ -42,7 +42,8 @@ class House {
 }
 
 /**
- * A new type of house, Ranch.
+ * A new type of house, Ranch that's inheriting properties and functionality from House.
+ * (See: https://www.php.net/manual/en/language.oop5.inheritance.php)
  */
 class Ranch extends House {
   public function buildUp(int $addBeds = 0, int $addBaths = 0) {

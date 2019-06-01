@@ -79,6 +79,8 @@ final class HighRanch extends House {
 }
 
 $my_house = new Ranch(500000, 3, 1.75);
+$my_house->buildUp(2, 1);
+$my_house->listForSale();
 $my_house->showHouse();
 
 $neighboring_house = new HighRanch(650000, 4, 2);

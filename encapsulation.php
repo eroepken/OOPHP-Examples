@@ -2,6 +2,7 @@
 
 /**
  * Our base House class, which can be extended or instantiated.
+ * (See: https://www.php.net/manual/en/language.oop5.basic.php)
  */
 class House {
   /**
